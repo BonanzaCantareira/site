@@ -26,7 +26,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600&family=Parisienne&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/style.css?v=20261023">
 
 <!-- GOOGLE ANALYTICS 4 — Measurement ID: G-4Y4GLZ8PND -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4Y4GLZ8PND"></script>
@@ -142,23 +142,61 @@
       <p class="eyebrow">Cardápio</p>
       <h2>Sabores que acompanham a paisagem</h2>
 
-      <div class="menu-teaser-grid" style="text-align:left;">
-        <a class="teaser-card" href="/cardapio#entradas">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-leaf"></use></svg></div>
-          <div class="teaser-card-body"><h3>Entradas</h3><p>Para abrir o apetite</p></div>
-        </a>
-        <a class="teaser-card" href="/cardapio#saladas">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-salad"></use></svg></div>
-          <div class="teaser-card-body"><h3>Saladas</h3><p>Frescor da estação</p></div>
-        </a>
-        <a class="teaser-card" href="/cardapio#principais">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-fork"></use></svg></div>
-          <div class="teaser-card-body"><h3>Principais</h3><p>O coração da casa</p></div>
-        </a>
-        <a class="teaser-card" href="/cardapio#sobremesas">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-dessert"></use></svg></div>
-          <div class="teaser-card-body"><h3>Sobremesas</h3><p>O ponto final perfeito</p></div>
-        </a>
+      <div class="dish-carousel" data-carousel>
+        <ul class="dish-carousel__track" tabindex="0" aria-label="Pratos do cardápio">
+          <li class="dish-card">
+            <a href="/cardapio#entradas"><img src="/images/cardapio/brie-folhado.jpg" alt="Porções de brie folhado ao mel com flor comestível em travessa branca" loading="lazy" width="900" height="675">
+            <div class="dish-card__body"><p class="dish-card__cat">Entradas</p><h3>Brie Folhado ao Mel</h3></div></a>
+          </li>
+          <li class="dish-card">
+            <a href="/cardapio#proteinas"><img src="/images/cardapio/picanha-grelhada.jpg" alt="Picanha grelhada fatiada com creme de arroz e flores comestíveis em prato branco" loading="lazy" width="900" height="675">
+            <div class="dish-card__body"><p class="dish-card__cat">Proteínas</p><h3>Picanha Grelhada</h3></div></a>
+          </li>
+          <li class="dish-card">
+            <a href="/cardapio#risotos"><img src="/images/cardapio/risoto-de-funghi.jpg" alt="Risoto de funghi com flor comestível em prato azul" loading="lazy" width="900" height="675">
+            <div class="dish-card__body"><p class="dish-card__cat">Risotos</p><h3>Risoto de Funghi Italiani</h3></div></a>
+          </li>
+          <li class="dish-card">
+            <a href="/cardapio#porcoes"><img src="/images/cardapio/dadinho-de-tapioca.jpg" alt="Dadinhos de tapioca com geleia de pimenta e flor comestível em travessa branca" loading="lazy" width="900" height="675">
+            <div class="dish-card__body"><p class="dish-card__cat">Porções</p><h3>Dadinho de Tapioca</h3></div></a>
+          </li>
+          <li class="dish-card">
+            <a href="/cardapio#massas"><img src="/images/cardapio/talharim-na-manteiga-de-salvia.jpg" alt="Talharim na manteiga de sálvia com tomates e flor comestível em prato branco" loading="lazy" width="900" height="675">
+            <div class="dish-card__body"><p class="dish-card__cat">Massas Artesanais</p><h3>Talharim na Manteiga de Sálvia</h3></div></a>
+          </li>
+          <li class="dish-card">
+            <a href="/cardapio#proteinas"><img src="/images/cardapio/salmao-ao-molho-de-maracuja.jpg" alt="Filé de salmão grelhado com arroz de brócolis e legumes em prato branco" loading="lazy" width="900" height="675">
+            <div class="dish-card__body"><p class="dish-card__cat">Proteínas</p><h3>Salmão ao Molho de Maracujá</h3></div></a>
+          </li>
+          <li class="dish-card">
+            <a href="/cardapio#saladas"><img src="/images/cardapio/carpaccio-classico.jpg" alt="Carpaccio clássico com lascas de parmesão e alcaparras em prato azul" loading="lazy" width="900" height="675">
+            <div class="dish-card__body"><p class="dish-card__cat">Saladas</p><h3>Carpaccio Clássico</h3></div></a>
+          </li>
+          <li class="dish-card">
+            <a href="/cardapio#proteinas"><img src="/images/cardapio/costela-bovina-ao-molho-roti.jpg" alt="Costela bovina ao molho rôti servida sobre creme de arroz em prato branco" loading="lazy" width="900" height="675">
+            <div class="dish-card__body"><p class="dish-card__cat">Proteínas</p><h3>Costela Bovina ao Molho Rôti</h3></div></a>
+          </li>
+          <li class="dish-card">
+            <a href="/cardapio#sobremesas"><img src="/images/cardapio/tiramisu.jpg" alt="Tiramisù servido em taça com biscoito e hortelã" loading="lazy" width="900" height="675">
+            <div class="dish-card__body"><p class="dish-card__cat">Sobremesas</p><h3>Tiramisù do Chef</h3></div></a>
+          </li>
+          <li class="dish-card">
+            <a href="/cardapio#drinks"><img src="/images/cardapio/haras-sunset.jpg" alt="Drink Haras Sunset em taça com polpa de maracujá" loading="lazy" width="900" height="675">
+            <div class="dish-card__body"><p class="dish-card__cat">Drinks</p><h3>Haras Sunset</h3></div></a>
+          </li>
+          <li class="dish-card">
+            <a href="/cardapio#sobremesas"><img src="/images/cardapio/torta-triplo-cioccolato.jpg" alt="Fatia de torta triplo cioccolato com flores em prato azul" loading="lazy" width="900" height="675">
+            <div class="dish-card__body"><p class="dish-card__cat">Sobremesas</p><h3>Torta Triplo Cioccolato</h3></div></a>
+          </li>
+          <li class="dish-card">
+            <a href="/cardapio#saladas"><img src="/images/cardapio/ceviche-de-peixe-branco.jpg" alt="Ceviche de peixe branco com torradas e cítricos em prato azul" loading="lazy" width="900" height="675">
+            <div class="dish-card__body"><p class="dish-card__cat">Saladas</p><h3>Ceviche de Peixe Branco</h3></div></a>
+          </li>
+        </ul>
+        <div class="dish-carousel__nav">
+          <button type="button" class="dish-carousel__btn" data-dir="-1" aria-label="Pratos anteriores"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <button type="button" class="dish-carousel__btn" data-dir="1" aria-label="Próximos pratos"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        </div>
       </div>
 
       <div style="margin-top:44px;">
@@ -330,6 +368,6 @@
   <svg><use href="/images/icons/sprite.svg#icon-chat"></use></svg>
 </a>
 
-<script src="/js/main.js"></script>
+<script src="/js/main.js?v=20261023"></script>
 </body>
 </html>

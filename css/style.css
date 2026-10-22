@@ -421,28 +421,48 @@ input:focus-visible {
   .about-media { order: 2; }
 }
 
-/* ============================== CARDÁPIO TEASER ============================== */
-.menu-teaser-grid {
-  display: grid;
-  gap: 22px;
-  margin-top: 40px;
-  grid-template-columns: 1fr;
+/* ============================== CARDÁPIO TEASER (carrossel) ============================== */
+.dish-carousel { margin-top: 40px; text-align: left; }
+.dish-carousel__track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  list-style: none;
+  margin: 0 calc(var(--gutter) * -1);
+  padding: 4px var(--gutter) 12px;
+  scroll-padding-inline: var(--gutter);
 }
-@media (min-width: 640px) { .menu-teaser-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1024px) { .menu-teaser-grid { grid-template-columns: repeat(4, 1fr); } }
-
-.teaser-card {
+.dish-carousel__track::-webkit-scrollbar { display: none; }
+.dish-card {
+  flex: 0 0 78%;
+  scroll-snap-align: start;
   background: var(--creme-areia);
   border: 1px solid var(--verde-mata-10);
   border-radius: var(--radius-card);
   overflow: hidden;
   transition: box-shadow var(--transition), transform var(--transition);
 }
-.teaser-card:hover { box-shadow: var(--sombra-suave); transform: translateY(-4px); }
-.teaser-card .photo-placeholder { aspect-ratio: 1/1; }
-.teaser-card-body { padding: 18px 20px 22px; }
-.teaser-card-body h3 { margin-bottom: 4px; }
-.teaser-card-body p { font-size: var(--fs-small); color: var(--marrom-terra); }
+.dish-card:hover { box-shadow: var(--sombra-suave); transform: translateY(-4px); }
+.dish-card a { display: block; }
+.dish-card img { display: block; width: 100%; height: auto; aspect-ratio: 4/3; object-fit: cover; }
+.dish-card__body { padding: 16px 20px 20px; }
+.dish-card__cat { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--dourado); margin-bottom: 4px; }
+.dish-card h3 { font-size: 1.15rem; }
+@media (min-width: 640px) { .dish-card { flex-basis: calc((100% - 20px) / 2); } }
+@media (min-width: 1024px) { .dish-card { flex-basis: calc((100% - 40px) / 3); } }
+.dish-carousel__nav { display: flex; justify-content: center; gap: 12px; margin-top: 20px; }
+.dish-carousel__btn {
+  width: 46px; height: 46px; border-radius: 50%;
+  border: 1px solid var(--verde-mata); background: transparent; color: var(--verde-mata);
+  display: inline-flex; align-items: center; justify-content: center; cursor: pointer;
+  transition: background var(--transition), color var(--transition), opacity var(--transition);
+}
+.dish-carousel__btn:hover:not(:disabled) { background: var(--verde-mata); color: var(--creme-areia); }
+.dish-carousel__btn:disabled { opacity: 0.3; cursor: default; }
+@media (prefers-reduced-motion: reduce) { .dish-carousel__track { scroll-behavior: auto; } .dish-card { transition: none; } }
 
 /* =============================== RESERVAS =============================== */
 .reservas {
@@ -673,6 +693,7 @@ input:focus-visible {
 
 .menu-item { display: flex; flex-direction: column; }
 .menu-item .photo-placeholder { aspect-ratio: 4/3; border-radius: var(--radius-card); margin-bottom: 14px; }
+.menu-item > img { display: block; width: 100%; height: auto; aspect-ratio: 4/3; object-fit: cover; border-radius: var(--radius-card); margin-bottom: 14px; }
 .menu-item h3 { font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; }
 .menu-item p { font-size: var(--fs-small); color: var(--marrom-terra); margin-top: 4px; }
 

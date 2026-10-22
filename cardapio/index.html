@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cardápio — Bonanza Cantareira</title>
-<meta name="description" content="Conheça o cardápio executivo do Bonanza Cantareira: entradas, saladas, principais, acompanhamentos e sobremesas assinados pelo Chef Felipe Moura Costa.">
+<meta name="description" content="Cardápio do Bonanza Cantareira: entradas, saladas, porções, proteínas, risotos, massas artesanais, sobremesas e drinks.">
 <link rel="canonical" href="https://bonanzacantareira.com.br/cardapio">
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:title" content="Cardápio — Bonanza Cantareira">
-<meta property="og:description" content="Entradas, saladas, principais, acompanhamentos e sobremesas — o cardápio executivo do Bonanza Cantareira.">
+<meta property="og:description" content="Cardápio do Bonanza Cantareira: entradas, saladas, porções, proteínas, risotos, massas artesanais, sobremesas e drinks.">
 <meta property="og:image" content="https://bonanzacantareira.com.br/images/og-image.jpg">
 <meta property="og:url" content="https://bonanzacantareira.com.br/cardapio">
 <meta name="twitter:card" content="summary_large_image">
@@ -77,21 +77,19 @@
     <div class="menu-nav__inner">
       <a href="#entradas">Entradas</a>
       <a href="#saladas">Saladas</a>
-      <a href="#principais">Principais</a>
-      <a href="#acompanhamentos">Acompanhamentos</a>
+      <a href="#porcoes">Porções</a>
+      <a href="#proteinas">Proteínas</a>
+      <a href="#risotos">Risotos</a>
+      <a href="#massas">Massas Artesanais</a>
       <a href="#sobremesas">Sobremesas</a>
+      <a href="#drinks">Drinks</a>
     </div>
   </nav>
 
   <div class="container">
 
-    <!--
-      Conteúdo baseado no Cardápio Executivo Bonanza (documento oficial do cliente).
-      Itens sem descrição no documento original são exibidos apenas pelo nome,
-      para não inventar detalhes de preparo. Sem preços, conforme definido no PRD.
-    -->
+    <!-- Cardápio apenas com os itens que têm foto. -->
 
-    <!-- ENTRADAS -->
     <section class="menu-category" id="entradas">
       <div class="menu-category-head">
         <p class="eyebrow">Para abrir o apetite</p>
@@ -99,34 +97,28 @@
       </div>
       <div class="menu-items-grid">
         <article class="menu-item">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-leaf"></use></svg><span>Foto: Bruschetta Tradicional</span></div>
+          <img src="/images/cardapio/brie-folhado.jpg" alt="Porções de brie folhado ao mel com flor comestível em travessa branca" loading="lazy" width="900" height="675">
+          <h3>Brie Folhado ao Mel</h3>
+          <p>Queijo brie envolto em massa folhada dourada, finalizado com toque de mel.</p>
+        </article>
+        <article class="menu-item">
+          <img src="/images/cardapio/vol-au-vent-de-camarao.jpg" alt="Vol-au-vent de camarão gratinado em travessa branca" loading="lazy" width="900" height="675">
+          <h3>Vol-Au-Vent de Camarão</h3>
+          <p>Massa folhada delicada recheada com creme de camarões selecionados.</p>
+        </article>
+        <article class="menu-item">
+          <img src="/images/cardapio/canape-de-alho-poro.jpg" alt="Canapés de alho-poró gratinados com flor comestível em travessa branca" loading="lazy" width="900" height="675">
+          <h3>Canapé de Alho-Poró</h3>
+          <p>Canapés artesanais com suave creme de alho-poró.</p>
+        </article>
+        <article class="menu-item">
+          <img src="/images/cardapio/bruschetta-tradicional.jpg" alt="Bruschettas gratinadas servidas em travessa branca com flor comestível" loading="lazy" width="900" height="675">
           <h3>Bruschetta Tradicional</h3>
-          <p>Pão italiano crocante com tomate, manjericão, azeite e parmesão.</p>
-        </article>
-        <article class="menu-item">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-leaf"></use></svg><span>Foto: Caponata de Berinjela</span></div>
-          <h3>Caponata de Berinjela</h3>
-          <p>Servida com torradas artesanais.</p>
-        </article>
-        <article class="menu-item">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-leaf"></use></svg><span>Foto: Brie Folhado</span></div>
-          <h3>Brie Folhado</h3>
-          <p>Queijo brie envolto em massa folhada com toque de mel.</p>
-        </article>
-        <article class="menu-item">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-leaf"></use></svg><span>Foto: Vol-au-Vent de Camarão</span></div>
-          <h3>Vol-au-Vent de Camarão</h3>
-          <p>Massa folhada recheada com creme de camarão.</p>
-        </article>
-        <article class="menu-item">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-leaf"></use></svg><span>Foto: Mini Canapé de Alho-Poró</span></div>
-          <h3>Mini Canapé de Alho-Poró</h3>
-          <p>Canapés delicados com creme de alho-poró.</p>
+          <p>Pão italiano tostado, tomates frescos, manjericão e lascas de parmesão.</p>
         </article>
       </div>
     </section>
 
-    <!-- SALADAS -->
     <section class="menu-category" id="saladas">
       <div class="menu-category-head">
         <p class="eyebrow">Frescor da estação</p>
@@ -134,168 +126,129 @@
       </div>
       <div class="menu-items-grid">
         <article class="menu-item">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-salad"></use></svg></div>
-          <h3>Salada Caprese</h3>
-        </article>
-        <article class="menu-item">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-salad"></use></svg></div>
-          <h3>Salada Caesar</h3>
-        </article>
-        <article class="menu-item">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-salad"></use></svg></div>
+          <img src="/images/cardapio/carpaccio-classico.jpg" alt="Carpaccio clássico com lascas de parmesão e alcaparras em prato azul" loading="lazy" width="900" height="675">
           <h3>Carpaccio Clássico</h3>
+          <p>Finas lâminas de carne bovina, rúcula fresca, alcaparras e parmesão.</p>
         </article>
         <article class="menu-item">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-salad"></use></svg></div>
-          <h3>Mix de Folhas Premium</h3>
+          <img src="/images/cardapio/mix-de-folhas.jpg" alt="Mix de folhas com tomate-cereja e fatias de manga em prato azul" loading="lazy" width="900" height="675">
+          <h3>Mix de Folhas Nobres</h3>
+          <p>Folhas selecionadas, manga fresca e lascas de parmesão.</p>
         </article>
         <article class="menu-item">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-salad"></use></svg></div>
-          <h3>Salada Niçoise</h3>
-        </article>
-        <article class="menu-item">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-salad"></use></svg></div>
+          <img src="/images/cardapio/ceviche-de-peixe-branco.jpg" alt="Ceviche de peixe branco com torradas e cítricos em prato azul" loading="lazy" width="900" height="675">
           <h3>Ceviche de Peixe Branco</h3>
+          <p>Peixe marinado em limão, cebola roxa e ervas aromáticas.</p>
         </article>
       </div>
     </section>
 
-    <!-- PRINCIPAIS -->
-    <section class="menu-category" id="principais">
+    <section class="menu-category" id="porcoes">
+      <div class="menu-category-head">
+        <p class="eyebrow">Para compartilhar</p>
+        <h2>Porções</h2>
+      </div>
+      <div class="menu-items-grid">
+        <article class="menu-item">
+          <img src="/images/cardapio/batata-frita-crocante.jpg" alt="Batatas fritas crocantes com molho e alecrim em travessa branca" loading="lazy" width="900" height="675">
+          <h3>Batata Frita Crocante</h3>
+          <p>Batatas fritas douradas, servidas com molho especial da casa.</p>
+        </article>
+        <article class="menu-item">
+          <img src="/images/cardapio/iscas-de-frango-crocante.jpg" alt="Iscas de frango empanadas crocantes com molho, em travessa branca" loading="lazy" width="900" height="675">
+          <h3>Iscas de Frango Crocante</h3>
+          <p>Filé de frango empanado, crocante por fora e suculento por dentro.</p>
+        </article>
+        <article class="menu-item">
+          <img src="/images/cardapio/iscas-bovinas-com-cebola-roxa.jpg" alt="Iscas bovinas com cebola roxa caramelizada, torradas e molho em travessa branca" loading="lazy" width="900" height="675">
+          <h3>Iscas Bovinas com Cebola Roxa</h3>
+          <p>Tiras de carne bovina salteadas na manteiga com cebola roxa caramelizada.</p>
+        </article>
+        <article class="menu-item">
+          <img src="/images/cardapio/bolinho-de-arroz-crocante.jpg" alt="Bolinhos de arroz crocantes com duas fondutas, em travessa branca" loading="lazy" width="900" height="675">
+          <h3>Bolinho de Arroz Crocante</h3>
+          <p>Bolinhos artesanais recheados e servidos com fonduta de parmesão.</p>
+        </article>
+        <article class="menu-item">
+          <img src="/images/cardapio/provolone-a-milanesa.jpg" alt="Cubos de provolone à milanesa com molho e flor comestível em travessa branca" loading="lazy" width="900" height="675">
+          <h3>Provolone à Milanesa</h3>
+          <p>Queijo provolone empanado e frito, acompanhado de molho especial.</p>
+        </article>
+        <article class="menu-item">
+          <img src="/images/cardapio/dadinho-de-tapioca.jpg" alt="Dadinhos de tapioca com geleia de pimenta e flor comestível em travessa branca" loading="lazy" width="900" height="675">
+          <h3>Dadinho de Tapioca</h3>
+          <p>Cubos de tapioca e queijo coalho servidos com geleia de pimenta.</p>
+        </article>
+        <article class="menu-item">
+          <img src="/images/cardapio/mini-pastel.jpg" alt="Mini pastéis dourados com molho e flor comestível em travessa branca" loading="lazy" width="900" height="675">
+          <h3>Mini Pastel</h3>
+          <p>Pastéis artesanais sabor carne ou queijo.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="menu-category" id="proteinas">
       <div class="menu-category-head">
         <p class="eyebrow">O coração da casa</p>
-        <h2>Principais</h2>
+        <h2>Proteínas</h2>
       </div>
-
-      <h3 class="menu-subcategory">Carnes</h3>
       <div class="menu-items-grid">
         <article class="menu-item">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-fork"></use></svg></div>
-          <h3>Filé Mignon Grelhado</h3>
+          <img src="/images/cardapio/file-mignon-a-parmegiana.jpg" alt="Filé mignon à parmegiana gratinado com batatas fritas em prato branco" loading="lazy" width="900" height="675">
+          <h3>Filé Mignon à Parmegiana</h3>
+          <p>Filé mignon empanado, molho pomodoro e queijo gratinado.</p>
         </article>
         <article class="menu-item">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-fork"></use></svg></div>
-          <h3>Parmegiana de Filé Mignon</h3>
-        </article>
-        <article class="menu-item">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-fork"></use></svg></div>
+          <img src="/images/cardapio/picanha-grelhada.jpg" alt="Picanha grelhada fatiada com creme de arroz e flores comestíveis em prato branco" loading="lazy" width="900" height="675">
           <h3>Picanha Grelhada</h3>
+          <p>Picanha grelhada, preparada no ponto de sua preferência.</p>
         </article>
         <article class="menu-item">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-fork"></use></svg></div>
-          <h3>Costela ao Molho Barbecue</h3>
+          <img src="/images/cardapio/costela-bovina-ao-molho-roti.jpg" alt="Costela bovina ao molho rôti servida sobre creme de arroz em prato branco" loading="lazy" width="900" height="675">
+          <h3>Costela Bovina ao Molho Rôti</h3>
+          <p>Costela bovina assada, finalizada com clássico molho rôti.</p>
         </article>
         <article class="menu-item">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-fork"></use></svg></div>
-          <h3>Lagarto ao Molho Madeira</h3>
-        </article>
-      </div>
-
-      <h3 class="menu-subcategory">Aves</h3>
-      <div class="menu-items-grid">
-        <article class="menu-item">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-fork"></use></svg></div>
-          <h3>Filé de Frango Grelhado</h3>
-        </article>
-        <article class="menu-item">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-fork"></use></svg></div>
-          <h3>Ballotine de Frango Recheado</h3>
-        </article>
-      </div>
-
-      <h3 class="menu-subcategory">Peixes</h3>
-      <div class="menu-items-grid">
-        <article class="menu-item">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-fork"></use></svg></div>
-          <h3>Saint Peter à Belle Meunière</h3>
-        </article>
-        <article class="menu-item">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-fork"></use></svg></div>
+          <img src="/images/cardapio/salmao-ao-molho-de-maracuja.jpg" alt="Filé de salmão grelhado com arroz de brócolis e legumes em prato branco" loading="lazy" width="900" height="675">
           <h3>Salmão ao Molho de Maracujá</h3>
-        </article>
-      </div>
-
-      <h3 class="menu-subcategory">Massas</h3>
-      <div class="menu-items-grid">
-        <article class="menu-item">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-fork"></use></svg></div>
-          <h3>Rondelli de Ricota e Tomate Seco</h3>
-        </article>
-        <article class="menu-item">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-fork"></use></svg></div>
-          <h3>Ravioli de Brócolis e Muçarela</h3>
-        </article>
-        <article class="menu-item">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-fork"></use></svg></div>
-          <h3>Lasanha à Bolonhesa</h3>
-        </article>
-        <article class="menu-item">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-fork"></use></svg></div>
-          <h3>Talharim na Manteiga de Sálvia</h3>
-        </article>
-        <article class="menu-item">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-fork"></use></svg></div>
-          <h3>Sofioli de Queijo</h3>
-        </article>
-        <article class="menu-item">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-fork"></use></svg></div>
-          <h3>Conchiglione de 4 Queijos</h3>
-        </article>
-        <article class="menu-item">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-fork"></use></svg></div>
-          <h3>Sofioli de Manjericão e Mussarela</h3>
-        </article>
-      </div>
-      <div class="sauce-note">
-        <span class="sauce-note__label">Molhos disponíveis:</span>
-        <span class="sauce-list">
-          <span>Bechamel</span><span>Funduta de Parmesão</span><span>Rosé</span><span>Pomodoro</span><span>Alfredo</span><span>Bolonhesa</span><span>Gorgonzola</span>
-        </span>
-      </div>
-
-      <h3 class="menu-subcategory">Risotos</h3>
-      <div class="menu-items-grid">
-        <article class="menu-item">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-fork"></use></svg></div>
-          <h3>Risoto de Funghi</h3>
-        </article>
-        <article class="menu-item">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-fork"></use></svg></div>
-          <h3>Risoto de Camarão</h3>
-        </article>
-        <article class="menu-item">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-fork"></use></svg></div>
-          <h3>Risoto de Alho-Poró</h3>
-        </article>
-        <article class="menu-item">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-fork"></use></svg></div>
-          <h3>Risoto de Rúcula com Tomate Seco</h3>
+          <p>Filé de salmão grelhado, acompanhado de um molho de maracujá.</p>
         </article>
       </div>
     </section>
 
-    <!-- ACOMPANHAMENTOS -->
-    <section class="menu-category" id="acompanhamentos">
+    <section class="menu-category" id="risotos">
       <div class="menu-category-head">
-        <p class="eyebrow">Para completar o prato</p>
-        <h2>Acompanhamentos</h2>
+        <p class="eyebrow">Cremosos, no ponto</p>
+        <h2>Risotos</h2>
       </div>
-      <ul class="side-list">
-        <li>Arroz Branco</li>
-        <li>Arroz Biro-Biro</li>
-        <li>Arroz Caldoso de Costela</li>
-        <li>Batata Sauté</li>
-        <li>Aligot de Batata</li>
-        <li>Purê de Batata-Doce</li>
-        <li>Mandioca na Manteiga de Ervas</li>
-        <li>Feijão Tropeiro</li>
-        <li>Brócolis ao Alho</li>
-        <li>Legumes no Vapor</li>
-        <li>Farofa Crocante</li>
-      </ul>
+      <div class="menu-items-grid">
+        <article class="menu-item">
+          <img src="/images/cardapio/risoto-de-funghi.jpg" alt="Risoto de funghi com flor comestível em prato azul" loading="lazy" width="900" height="675">
+          <h3>Risoto de Funghi Italiani</h3>
+          <p>Risoto cremoso preparado com funghi italianos.</p>
+        </article>
+      </div>
     </section>
 
-    <!-- SOBREMESAS -->
+    <section class="menu-category" id="massas">
+      <div class="menu-category-head">
+        <p class="eyebrow">Tradição à mesa</p>
+        <h2>Massas Artesanais</h2>
+      </div>
+      <div class="menu-items-grid">
+        <article class="menu-item">
+          <img src="/images/cardapio/talharim-na-manteiga-de-salvia.jpg" alt="Talharim na manteiga de sálvia com tomates e flor comestível em prato branco" loading="lazy" width="900" height="675">
+          <h3>Talharim na Manteiga de Sálvia</h3>
+          <p>Massa talharim envolvida em manteiga aromatizada com sálvia, alho confitado e tomates frescos.</p>
+        </article>
+        <article class="menu-item">
+          <img src="/images/cardapio/conchiglione-quatro-queijos.jpg" alt="Conchiglione gratinado com molho de queijos e hibisco em prato branco" loading="lazy" width="900" height="675">
+          <h3>Conchiglione Quatro Queijos</h3>
+          <p>Massa recheada com quatro queijos.</p>
+        </article>
+      </div>
+    </section>
+
     <section class="menu-category" id="sobremesas">
       <div class="menu-category-head">
         <p class="eyebrow">O ponto final perfeito</p>
@@ -303,32 +256,53 @@
       </div>
       <div class="menu-items-grid">
         <article class="menu-item">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-dessert"></use></svg></div>
-          <h3>Tiramisu</h3>
+          <img src="/images/cardapio/tiramisu.jpg" alt="Tiramisù servido em taça com biscoito e hortelã" loading="lazy" width="900" height="675">
+          <h3>Tiramisù do Chef</h3>
+          <p>Releitura da clássica sobremesa italiana.</p>
         </article>
         <article class="menu-item">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-dessert"></use></svg></div>
-          <h3>Petit Gateau</h3>
+          <img src="/images/cardapio/torta-cookie-com-sorvete.jpg" alt="Torta cookie com bola de sorvete e calda de chocolate em prato azul" loading="lazy" width="900" height="675">
+          <h3>Torta Cookie com Sorvete</h3>
+          <p>Torta Cookie artesanal quentinha servida com sorvete de creme.</p>
         </article>
         <article class="menu-item">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-dessert"></use></svg></div>
-          <h3>Brownie con Nuvola di Crema</h3>
-        </article>
-        <article class="menu-item">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-dessert"></use></svg></div>
+          <img src="/images/cardapio/torta-triplo-cioccolato.jpg" alt="Fatia de torta triplo cioccolato com flores em prato azul" loading="lazy" width="900" height="675">
           <h3>Torta Triplo Cioccolato</h3>
+          <p>Torta com três camadas de mousse de chocolate ao leite, amargo e branco.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="menu-category" id="drinks">
+      <div class="menu-category-head">
+        <p class="eyebrow">Para a hora do brinde</p>
+        <h2>Drinks</h2>
+      </div>
+      <div class="menu-items-grid">
+        <article class="menu-item">
+          <img src="/images/cardapio/gin-tonica.jpg" alt="Gin tônica em taça com gelo e fatias de limão siciliano" loading="lazy" width="900" height="675">
+          <h3>Gin Tônica</h3>
+          <p>Tanqueray, água tônica e limão siciliano</p>
         </article>
         <article class="menu-item">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-dessert"></use></svg></div>
-          <h3>Pannacotta</h3>
+          <img src="/images/cardapio/negroni-alazao.jpg" alt="Negroni Alazão em copo com gelo e fatia de limão" loading="lazy" width="900" height="675">
+          <h3>Negroni Alazão</h3>
+          <p>Beefeater, cointreau e limão siciliano</p>
         </article>
         <article class="menu-item">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-dessert"></use></svg></div>
-          <h3>Creme de Papaia com Licor de Cassis</h3>
+          <img src="/images/cardapio/moscow-mule.jpg" alt="Moscow Mule em caneca de cobre com espuma de gengibre e hortelã" loading="lazy" width="900" height="675">
+          <h3>Moscow Mule</h3>
+          <p>Absolut, espuma de gengibre, hortelã e limão taiti</p>
         </article>
         <article class="menu-item">
-          <div class="photo-placeholder"><svg><use href="/images/icons/sprite.svg#icon-dessert"></use></svg></div>
-          <h3>Brownie com Sorvete de Creme</h3>
+          <img src="/images/cardapio/haras-sunset.jpg" alt="Drink Haras Sunset em taça com polpa de maracujá" loading="lazy" width="900" height="675">
+          <h3>Haras Sunset</h3>
+          <p>Tanqueray, licor 43, água tônica e polpa de maracujá</p>
+        </article>
+        <article class="menu-item">
+          <img src="/images/cardapio/alines-drink.jpg" alt="Aline&#x27;s Drink em taça com frutas vermelhas, espuma e hortelã" loading="lazy" width="900" height="675">
+          <h3>Aline&#x27;s Drink</h3>
+          <p>Tanqueray, espuma de gengibre, frutas vermelhas e xarope de açúcar</p>
         </article>
       </div>
     </section>
@@ -390,6 +364,6 @@
   <svg><use href="/images/icons/sprite.svg#icon-chat"></use></svg>
 </a>
 
-<script src="/js/main.js"></script>
+<script src="/js/main.js?v=20261023"></script>
 </body>
 </html>

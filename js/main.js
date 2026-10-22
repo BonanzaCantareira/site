@@ -118,3 +118,36 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 });
+
+/* ---------------- Carrossel de pratos (home) ---------------- */
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll("[data-carousel]").forEach(function (root) {
+    var track = root.querySelector(".dish-carousel__track");
+    var prev = root.querySelector('[data-dir="-1"]');
+    var next = root.querySelector('[data-dir="1"]');
+    if (!track || !prev || !next) return;
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    function update() {
+      prev.disabled = track.scrollLeft <= 2;
+      next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+    }
+    function go(dir) {
+      var card = track.querySelector(".dish-card");
+      if (!card) return;
+      var gap = parseFloat(getComputedStyle(track).columnGap) || 20;
+      var visible = Math.max(1, Math.floor(track.clientWidth / (card.offsetWidth + gap)));
+      track.scrollBy({ left: dir * visible * (card.offsetWidth + gap), behavior: reduce ? "auto" : "smooth" });
+    }
+    prev.addEventListener("click", function () { go(-1); });
+    next.addEventListener("click", function () { go(1); });
+    var ticking = false;
+    track.addEventListener("scroll", function () {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(function () { update(); ticking = false; });
+    }, { passive: true });
+    window.addEventListener("resize", update);
+    update();
+  });
+});
