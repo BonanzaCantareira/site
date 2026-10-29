@@ -2,10 +2,7 @@
   "name": "site-bonanza-cantareira",
   "version": "1.0.0",
   "private": true,
-  "description": "Site estático do Bonanza Cantareira com função de pagamento (Mercado Pago Checkout Pro)",
-  "dependencies": {
-    "mercadopago": "^2.0.0"
-  },
+  "description": "Site estático do Bonanza Cantareira com checkout InfinitePay",
   "engines": {
     "node": ">=18"
   }

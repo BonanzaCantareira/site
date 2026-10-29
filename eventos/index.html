@@ -23,7 +23,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600&family=Parisienne&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="/css/style.css?v=20261023">
+<link rel="stylesheet" href="/css/style.css?v=20261029b">
 
 <script type="application/ld+json">
 {
@@ -45,7 +45,7 @@
       "addressCountry": "BR"
     }
   },
-  "image": ["https://bonanzacantareira.com.br/images/eventos-espaco.jpg"],
+  "image": ["https://bonanzacantareira.com.br/images/eventos/bruno-henrique-comediante.webp"],
   "offers": {
     "@type": "Offer",
     "url": "https://bonanzacantareira.com.br/eventos#ingresso-standup",
@@ -98,42 +98,20 @@
 
 <main id="conteudo">
 
-  <section class="menu-hero">
+  <section class="event-spotlight" id="ingresso-standup" aria-labelledby="show-title">
     <div class="container">
-      <p class="eyebrow">Eventos</p>
-      <h1>Celebre seu momento especial aqui</h1>
-      <p>Aniversários, comemorações em família, encontros corporativos, receba seus convidados em meio à natureza da Serra da Cantareira.</p>
-    </div>
-  </section>
-
-  <section class="section show-section" id="ingresso-standup">
-    <div class="container">
-      <p class="eyebrow">Próximo evento</p>
-
-      <article class="show-card reveal">
-        <div class="show-card__date" aria-label="21 de novembro, às 20 horas">
-          <span class="show-card__day">21</span>
-          <span class="show-card__month">Nov</span>
-          <span class="show-card__time">20h</span>
+      <div class="event-spotlight__heading"><p class="eyebrow">Agenda Bonanza · Próximo evento</p><span class="event-spotlight__live">21 de novembro · Sábado</span></div>
+      <div class="event-spotlight__grid">
+        <div class="event-spotlight__story">
+          <div class="event-spotlight__portrait"><img src="/images/eventos/bruno-henrique-comediante.webp" alt="Bruno Henrique com microfone, em apresentação de stand-up comedy" width="900" height="610" fetchpriority="high"></div>
+          <div class="event-spotlight__details"><span class="event-spotlight__kicker">Uma noite para rir e celebrar</span><h1 id="show-title">Bruno Henrique <em>Stand-Up Comedy</em></h1><p>O humor toma conta do Bonanza Cantareira. Venha viver uma noite especial de boas risadas na Serra da Cantareira.</p>
+            <div class="event-spotlight__facts"><span>◷ &nbsp; 21/11 · 20h</span><span>⌖ &nbsp; Bonanza Cantareira · Mairiporã/SP</span></div>
+            <div class="event-spotlight__offer"><strong>R$ 29,90</strong><span>o par de ingressos <small>Consumo à parte</small></span></div>
+            <p class="event-spotlight__perks">Balde de cerveja: compre 3 e leve 4 · Dobro de caipirinha até 20h</p>
+            <a class="btn btn--primary event-spotlight__mobile-cta" href="#ticket-form">Garantir meus ingressos ↓</a>
+          </div>
         </div>
-
-        <div class="show-card__body">
-          <h2>Bruno Henrique <span class="show-card__sep">|</span> Stand Up Comedy</h2>
-          <p>Uma noite de stand-up comedy com Bruno Henrique no Bonanza Cantareira, em meio à natureza da Serra da Cantareira.</p>
-
-          <ul class="show-card__meta">
-            <li><svg><use href="/images/icons/sprite.svg#icon-calendar"></use></svg> Sábado, 21 de novembro</li>
-            <li><svg><use href="/images/icons/sprite.svg#icon-clock"></use></svg> 20h</li>
-            <li><svg><use href="/images/icons/sprite.svg#icon-pin"></use></svg> Bonanza Cantareira — Mairiporã/SP</li>
-          </ul>
-
-          <p class="show-card__price">
-            <strong>R$&nbsp;29,90</strong>
-            <span>ingresso para o casal</span>
-          </p>
-        </div>
-
-        <form class="ticket-form" id="ticket-form" action="/.netlify/functions/criar-checkout" method="post" novalidate>
+        <div class="event-spotlight__checkout">        <form class="ticket-form" id="ticket-form" action="/.netlify/functions/criar-checkout" method="post" novalidate>
           <h3>Garanta seu ingresso</h3>
           <p class="ticket-form__hint">Preencha seus dados e siga para o pagamento seguro (Pix ou cartão de crédito) pela InfinitePay.</p>
 
@@ -168,11 +146,23 @@
           </button>
 
           <p class="ticket-form__legal">Pagamento processado com segurança pela InfinitePay. Seus dados são usados apenas para a emissão do ingresso e contato sobre o evento.</p>
-        </form>
-      </article>
+        </form></div>
+      </div>
     </div>
   </section>
 
+  <section class="memorias-section" aria-labelledby="memorias-titulo">
+    <div class="container">
+      <div class="memorias-heading"><div><p class="eyebrow">Nossa história</p><h2 id="memorias-titulo">Momentos que ficam</h2><p>Encontros, música e celebrações que fizeram parte do Bonanza.</p></div></div>
+      <div class="memorias-stage"><button type="button" class="memorias-arrow memorias-arrow--prev" data-carousel-prev aria-label="Evento anterior">&#8592;</button><div class="memorias-track" id="memorias-track" tabindex="0" aria-label="Carrossel de eventos anteriores">
+        <article class="memorias-card"><div class="memorias-card__art"><img src="/images/eventos/leo-koch.webp" alt="Arte de Léo Koch" loading="lazy"></div><div class="memorias-card__copy"><span>18/07</span><h3>Léo Koch</h3><p>Inauguração</p></div></article>
+        <article class="memorias-card"><div class="memorias-card__art"><img src="/images/eventos/rafael-sax.webp" alt="Arte de Rafael Saxofonista" loading="lazy"></div><div class="memorias-card__copy"><span>28/08</span><h3>Rafael Saxofonista</h3><p>Sax ao vivo</p></div></article>
+        <article class="memorias-card"><div class="memorias-card__art"><img src="/images/eventos/leandro-dias.webp" alt="Arte de Leandro Dias" loading="lazy"></div><div class="memorias-card__copy"><span>10/10</span><h3>Leandro Dias</h3><p>Música ao vivo</p></div></article>
+        <article class="memorias-card"><div class="memorias-card__art"><img src="/images/eventos/dia-criancas.webp" alt="Arte de Dia das Crianças" loading="lazy"></div><div class="memorias-card__copy"><span>12/10</span><h3>Dia das Crianças</h3><p>Pintura facial e sobremesa de brinde</p></div></article>
+        <article class="memorias-card"><div class="memorias-card__art"><img src="/images/eventos/aniversarios.webp" alt="Arte de Aniversários" loading="lazy"></div><div class="memorias-card__copy"><span>Celebrações especiais</span><h3>Aniversários</h3><p>Balão decorativo e caneca</p></div></article>
+      </div><button type="button" class="memorias-arrow memorias-arrow--next" data-carousel-next aria-label="Próximo evento">&#8594;</button></div><p class="memorias-swipe">Deslize para explorar os eventos ↔</p>
+    </div>
+  </section>
   <section class="section">
     <div class="container">
       <div class="evento-info reveal">
@@ -253,5 +243,6 @@
 
 <script src="/js/main.js?v=20261023"></script>
 <script src="/js/ingresso.js?v=20261028"></script>
+<script src="/js/eventos-carousel.js?v=20261029c"></script>
 </body>
 </html>
