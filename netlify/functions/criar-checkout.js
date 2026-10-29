@@ -17,6 +17,7 @@
    ========================================================================== */
 
 const crypto = require("crypto");
+const { registrarLead } = require("./_google-sheets");
 
 /* ----------------------- Configuração do evento ----------------------- */
 /* Preço e descrição ficam AQUI, no servidor: o navegador nunca decide o valor. */
@@ -97,6 +98,14 @@ exports.handler = async function (event) {
   }
   if (!telefone) {
     return resposta(400, { erro: "Informe um telefone com DDD, ex.: (11) 98906-2255.", campo: "telefone" });
+  }
+
+  // Captura o lead após validação, antes do checkout (inclui abandonos de pagamento).
+  // Falha no Sheets não bloqueia o checkout da InfinitePay.
+  try {
+    await registrarLead({ nome, email, telefone });
+  } catch (erro) {
+    console.error('Falha ao registrar lead no Google Sheets:', erro.message);
   }
 
   const siteUrl = (process.env.SITE_URL || DEFAULT_SITE).replace(/\/+$/, "");
