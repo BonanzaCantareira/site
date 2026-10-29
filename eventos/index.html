@@ -23,7 +23,40 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600&family=Parisienne&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="/css/style.css?v=20261025">
+<link rel="stylesheet" href="/css/style.css?v=20261023">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Bruno Henrique | Stand Up Comedy",
+  "description": "Uma noite de stand-up comedy com Bruno Henrique no Bonanza Cantareira, em meio à natureza da Serra da Cantareira.",
+  "startDate": "2026-11-21T20:00:00-03:00",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "location": {
+    "@type": "Place",
+    "name": "Bonanza Cantareira",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Estr. Augustinho Antonio Da Silva, 245",
+      "addressLocality": "Mairiporã",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    }
+  },
+  "image": ["https://bonanzacantareira.com.br/images/eventos-espaco.jpg"],
+  "offers": {
+    "@type": "Offer",
+    "url": "https://bonanzacantareira.com.br/eventos#ingresso-standup",
+    "price": "29.90",
+    "priceCurrency": "BRL",
+    "availability": "https://schema.org/InStock",
+    "validFrom": "2026-10-28T00:00:00-03:00"
+  },
+  "organizer": { "@type": "Organization", "name": "Bonanza Cantareira", "url": "https://bonanzacantareira.com.br" }
+}
+</script>
 
 <!-- GOOGLE ANALYTICS 4 — Measurement ID: G-4Y4GLZ8PND -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4Y4GLZ8PND"></script>
@@ -73,6 +106,73 @@
     </div>
   </section>
 
+  <section class="section show-section" id="ingresso-standup">
+    <div class="container">
+      <p class="eyebrow">Próximo evento</p>
+
+      <article class="show-card reveal">
+        <div class="show-card__date" aria-label="21 de novembro, às 20 horas">
+          <span class="show-card__day">21</span>
+          <span class="show-card__month">Nov</span>
+          <span class="show-card__time">20h</span>
+        </div>
+
+        <div class="show-card__body">
+          <h2>Bruno Henrique <span class="show-card__sep">|</span> Stand Up Comedy</h2>
+          <p>Uma noite de stand-up comedy com Bruno Henrique no Bonanza Cantareira, em meio à natureza da Serra da Cantareira.</p>
+
+          <ul class="show-card__meta">
+            <li><svg><use href="/images/icons/sprite.svg#icon-calendar"></use></svg> Sábado, 21 de novembro</li>
+            <li><svg><use href="/images/icons/sprite.svg#icon-clock"></use></svg> 20h</li>
+            <li><svg><use href="/images/icons/sprite.svg#icon-pin"></use></svg> Bonanza Cantareira — Mairiporã/SP</li>
+          </ul>
+
+          <p class="show-card__price">
+            <strong>R$&nbsp;29,90</strong>
+            <span>ingresso para o casal</span>
+          </p>
+        </div>
+
+        <form class="ticket-form" id="ticket-form" action="/.netlify/functions/criar-checkout" method="post" novalidate>
+          <h3>Garanta seu ingresso</h3>
+          <p class="ticket-form__hint">Preencha seus dados e siga para o pagamento seguro (Pix ou cartão de crédito) pela InfinitePay.</p>
+
+          <div class="field">
+            <label for="tf-nome">Nome completo</label>
+            <input type="text" id="tf-nome" name="nome" autocomplete="name" required minlength="3" maxlength="100" placeholder="Seu nome e sobrenome">
+            <span class="field__error" data-error-for="nome" role="alert"></span>
+          </div>
+
+          <div class="field">
+            <label for="tf-email">E-mail</label>
+            <input type="email" id="tf-email" name="email" autocomplete="email" inputmode="email" required maxlength="120" placeholder="voce@email.com">
+            <span class="field__error" data-error-for="email" role="alert"></span>
+          </div>
+
+          <div class="field">
+            <label for="tf-telefone">Telefone / WhatsApp</label>
+            <input type="tel" id="tf-telefone" name="telefone" autocomplete="tel-national" inputmode="tel" required maxlength="16" placeholder="(11) 98906-2255">
+            <span class="field__error" data-error-for="telefone" role="alert"></span>
+          </div>
+
+          <!-- Honeypot anti-robô: deve permanecer vazio e invisível -->
+          <div class="field--hp" aria-hidden="true">
+            <label for="tf-website">Não preencha este campo</label>
+            <input type="text" id="tf-website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+
+          <p class="ticket-form__status" id="ticket-status" role="status" aria-live="polite"></p>
+
+          <button class="btn btn--primary ticket-form__submit" type="submit">
+            <span class="btn__label">Ir para o pagamento</span>
+          </button>
+
+          <p class="ticket-form__legal">Pagamento processado com segurança pela InfinitePay. Seus dados são usados apenas para a emissão do ingresso e contato sobre o evento.</p>
+        </form>
+      </article>
+    </div>
+  </section>
+
   <section class="section">
     <div class="container">
       <div class="evento-info reveal">
@@ -104,54 +204,6 @@
             Falar com a equipe no WhatsApp
           </a>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- STAND-UP COMEDY — ingressos via Mercado Pago.
-       A seção fica oculta ("hidden") até a liberação das vendas. Para testar antes, abra /eventos/?teste=ingressos.
-       Para liberar ao público, remova o atributo "hidden" da <section>.
-       O preço real fica em netlify/functions/criar-pagamento.mjs (e o valor exibido no formulário, em data-preco). -->
-  <section class="section section--alt" id="stand-up" hidden>
-    <div class="container">
-      <div class="standup">
-        <div class="standup__copy">
-          <div class="standup__media"><img src="/images/eventos/bruno-henrique-standup.jpg" alt="Bruno Henrique segurando o microfone, ao lado da logo do show" width="768" loading="lazy"></div>
-          <p class="eyebrow">Stand-up comedy</p>
-          <h2>Bruno Henrique | Stand Up Comedy</h2>
-          <p>Uma noite de stand-up comedy com Bruno Henrique no Bonanza Cantareira, em meio à natureza da Serra da Cantareira.</p>
-          <ul class="standup__facts">
-            <li><strong>Data</strong><span>Sábado, 21 de novembro</span></li>
-            <li><strong>Horário</strong><span>20h</span></li>
-            <li><strong>Atração</strong><span>Bruno Henrique</span></li>
-            <li><strong>Local</strong><span>Bonanza Cantareira — Mairiporã/SP</span></li>
-            <li><strong>Ingresso</strong><span>R$ 29,90 por casal</span></li>
-          </ul>
-        </div>
-
-        <form class="ticket-card" id="form-ingresso" data-preco="29.90" novalidate>
-          <h3>Garanta seu ingresso</h3>
-          <p>Preencha seus dados e siga para o pagamento seguro no Mercado Pago.</p>
-
-          <div class="field"><label for="ing-nome">Nome completo</label>
-            <input type="text" id="ing-nome" name="nome" autocomplete="name" maxlength="80" required></div>
-          <div class="field"><label for="ing-email">E-mail</label>
-            <input type="email" id="ing-email" name="email" autocomplete="email" maxlength="120" required></div>
-          <div class="field"><label for="ing-tel">Telefone (com DDD)</label>
-            <input type="tel" id="ing-tel" name="telefone" autocomplete="tel" inputmode="tel" placeholder="(11) 99999-9999" maxlength="16" required></div>
-          <div class="field"><label for="ing-qtd">Ingressos (cada um vale para um casal)</label>
-            <select id="ing-qtd" name="quantidade"><option>1</option><option>2</option><option>3</option><option>4</option></select></div>
-          <p class="ticket-total">Total: <strong id="ing-total">R$ 29,90</strong></p>
-
-          <div class="hp" aria-hidden="true"><label>Não preencha este campo <input type="text" name="site" tabindex="-1" autocomplete="off"></label></div>
-
-          <label class="consent"><input type="checkbox" name="consentimento" required>
-            <span>Concordo em compartilhar meus dados com o Bonanza Cantareira e com o Mercado Pago para realizar esta compra.</span></label>
-
-          <p class="form-status" id="ticket-status" role="alert" aria-live="polite"></p>
-          <button class="btn btn--primary" type="submit">Ir para o pagamento</button>
-          <p class="form-note">Pagamento processado pelo Mercado Pago.</p>
-        </form>
       </div>
     </div>
   </section>
@@ -200,6 +252,6 @@
 </a>
 
 <script src="/js/main.js?v=20261023"></script>
-<script src="/js/standup.js?v=20261025"></script>
+<script src="/js/ingresso.js?v=20261028"></script>
 </body>
 </html>

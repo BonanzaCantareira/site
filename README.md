@@ -43,6 +43,27 @@ Dentro de `cardapio/index.html`, localize a categoria desejada (ex: `<section cl
 
 Em `eventos/index.html`, copie o bloco comentado `<!-- MODELO ... -->`, remova os comentários `<!--` `-->`, preencha data/título/descrição e cole acima ou abaixo do estado vazio. Quando houver pelo menos um evento, remova o bloco `.eventos-empty`.
 
+## Venda de ingressos (InfinitePay) — Stand Up com Bruno Henrique
+
+Fluxo: `/eventos` (formulário) → função serverless `netlify/functions/criar-checkout.js` → checkout da InfinitePay → pagamento → webhook no Make + redirecionamento para `/eventos/obrigado/`.
+
+**Configuração obrigatória (uma vez):** no Netlify, em *Site configuration → Environment variables*, crie:
+
+| Variável | Obrigatória | Valor |
+|---|---|---|
+| `INFINITEPAY_API_KEY` | Sim | sua chave `inchk_...` (nunca coloque no código/GitHub) |
+| `INFINITEPAY_WEBHOOK_URL` | Não | padrão: webhook do Make já definido na função |
+| `LEAD_WEBHOOK_URL` | Não | recebe nome/e-mail/telefone + `order_nsu` assim que o checkout é criado |
+| `SITE_URL` | Não | padrão: `https://bonanzacantareira.com.br` |
+
+Depois de criar a variável, faça um novo deploy (*Deploys → Trigger deploy*).
+
+**Onde alterar dados do evento:**
+- Preço, descrição e validade do link: constante `EVENTO` no topo de `netlify/functions/criar-checkout.js` (o valor é definido no servidor, nunca pelo navegador). Após o horário de `validoAte`, a função recusa novas vendas.
+- Texto exibido (data, descrição, preço): seção `#ingresso-standup` em `eventos/index.html` (e o JSON-LD no `<head>`).
+
+**Testar localmente:** `npx netlify dev` (precisa de `INFINITEPAY_API_KEY` em um arquivo `.env`, que não deve ir para o Git).
+
 ## Deploy (GitHub → Netlify → domínio Hostinger)
 
 1. Crie um repositório no GitHub e suba esta pasta (`git init`, `git add .`, `git commit`, `git push`).
